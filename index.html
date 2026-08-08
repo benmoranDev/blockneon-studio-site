@@ -14,6 +14,34 @@
 
   <!-- Estilos próprios -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Estilos do bloco de vídeo de gameplay (novo) -->
+  <style>
+    .gameplay-video-wrap{
+      margin: 1.25rem 0 1rem;
+      padding: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      background: rgba(0,0,0,0.25);
+    }
+    .gameplay-video-label{
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent, var(--cyan));
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .gameplay-video{
+      width: 100%;
+      max-width: 320px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 0 24px rgba(0,0,0,0.45);
+      background: #000;
+    }
+  </style>
 </head>
 <body>
 
@@ -151,15 +179,34 @@
             </div>
           </div>
 
+          <!-- Vídeo de gameplay (novo) -->
+          <div class="gameplay-video-wrap">
+            <p class="gameplay-video-label">Veja o gameplay</p>
+            <video
+                    class="gameplay-video"
+                    poster="video/blockneon-gameplay-poster.jpg"
+                    autoplay muted loop playsinline controls preload="metadata">
+              <source src="video/blockneon-gameplay.webm" type="video/webm">
+              <source src="video/blockneon-gameplay.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+
           <div class="screenshot-strip">
+            <a href="img/blockneon-06.png" target="_blank" rel="noopener" class="screenshot-thumb">
+              <img src="img/blockneon-06.png" alt="Captura do modo Classic do BlockNeon Challenge durante a partida" loading="lazy">
+            </a>
+            <a href="img/blockneon-07.png" target="_blank" rel="noopener" class="screenshot-thumb">
+              <img src="img/blockneon-07.png" alt="Captura do modo Challenge do BlockNeon Challenge durante a partida" loading="lazy">
+            </a>
+            <a href="img/blockneon-05.png" target="_blank" rel="noopener" class="screenshot-thumb">
+              <img src="img/blockneon-05.png" alt="Tela de menu do BlockNeon Challenge mostrando as pontuações salvas de Classic e Challenge" loading="lazy">
+            </a>
             <a href="img/blockneon-01.png" target="_blank" rel="noopener" class="screenshot-thumb">
               <img src="img/blockneon-01.png" alt="Captura do menu do BlockNeon Challenge" loading="lazy">
             </a>
             <a href="img/blockneon-03.png" target="_blank" rel="noopener" class="screenshot-thumb">
               <img src="img/blockneon-03.png" alt="Captura do menu do BlockNeon Challenge, versão alternativa" loading="lazy">
-            </a>
-            <a href="img/blockneon-04.png" target="_blank" rel="noopener" class="screenshot-thumb">
-              <img src="img/blockneon-04.png" alt="Captura do menu do BlockNeon Challenge, título colorido" loading="lazy">
             </a>
           </div>
         </div>
@@ -181,8 +228,8 @@
           </div>
 
           <div>
-            <span class="mode-pill"><b>Blast</b> grade 10×10 · mão de 3 peças</span>
-            <span class="mode-pill"><b>Super Blast</b> grade 14×14 · mão de 4 peças</span>
+            <span class="mode-pill"><b>Blast</b> grade 8×8 · mão de 3 peças</span>
+            <span class="mode-pill"><b>Super Blast</b> grade 10×10 · mão de 4 peças</span>
           </div>
 
           <div class="dev-status mt-3">
